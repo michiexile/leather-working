@@ -5,7 +5,7 @@ date: 2022-12-28 20:45:00 +0100
 categories: blog computer-assisted
 ---
 
-For the [Hedeby Quiver]({% post_url 2022-12-28-hedeby-quiver %}, I decided to try to generate the pattern myself, with 3d-modeling and UV coordinate maps, rather than building on the approach taken by the Leather Working Reverend.
+For the [Hedeby Quiver]({% post_url 2022-12-28-hedeby-quiver %}), I decided to try to generate the pattern myself, with 3d-modeling and UV coordinate maps, rather than building on the approach taken by the Leather Working Reverend.
 
 I was encouraged in the ambition by the [Seams to Sewing Pattern](http://thomaskole.nl/s2s/) plugin by Thomas Kole. So, building on the documentation pages for the plugin, I set out learning enough blender to pull off the project.
 
