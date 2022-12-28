@@ -34,6 +34,15 @@ show_featured: false
 paginate: 5
 logo: assets/img/header.png
 
+authors:
+  mvj:
+    name: Mikael Vejdemo-Johansson
+    display_name: michiexile
+    email: michiexile@gmail.com
+    web: https://michiexile.github.io
+    twitter: https://twitter.com/michiexile
+    description: "Author of this blog."
+
 # Build settings
 remote_theme: wowthemesnet/mediumish-theme-jekyll
 plugins:
@@ -61,3 +70,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - .#*
+  - README.md
