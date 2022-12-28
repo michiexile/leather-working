@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=El+Messiri:wght@700&family=Fondamento&display=swap');
+
+.mainheading h1 {
+    font-family: "El Messiri", Garamond, serif;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8, h9 {
+    font-family: "El Messiri", Garamond, serif;
+}
+
+body {
+    font-family: Fondamento, Helvetica, Arial, sans-serif;
+}
