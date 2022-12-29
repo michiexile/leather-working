@@ -43,6 +43,16 @@ authors:
     twitter: https://twitter.com/michiexile
     description: "Author of this blog."
 
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: mvj
+
+
 # Build settings
 remote_theme: wowthemesnet/mediumish-theme-jekyll
 plugins:

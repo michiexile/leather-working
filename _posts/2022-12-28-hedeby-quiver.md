@@ -3,6 +3,7 @@ layout: post
 title: The Hedeby Quiver
 date: 2022-12-28 20:19:00 +0100
 categories: blog hedeby-quiver archery
+image: assets/img/blender/28-render.png
 ---
 
 For my new leather project, I want to make myself a quiver. I already (write-up coming soon-ish) made my own arm bracer for my archery, but now that I have my own bow and will be buying my own arrows, I also need a quiver and a carrying case.

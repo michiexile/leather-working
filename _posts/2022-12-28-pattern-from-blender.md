@@ -3,6 +3,7 @@ layout: post
 title: Making a Pattern from Blender
 date: 2022-12-28 20:45:00 +0100
 categories: blog computer-assisted
+image: assets/img/blender/26-minimizestretch.png
 ---
 
 For the [Hedeby Quiver]({% post_url 2022-12-28-hedeby-quiver %}), I decided to try to generate the pattern myself, with 3d-modeling and UV coordinate maps, rather than building on the approach taken by the Leather Working Reverend.
@@ -172,6 +173,10 @@ One connected component selected.
 </figcaption>
 </figure>
 
+
+
+# UV Coordinate Maps to flatten pattern pieces
+
 Now we are getting close to where we can use the UV Layout engine to create pattern parts for a concrete sewing pattern for the quiver.
 
 To be able to track how the UV coordinate map interacts with the shape, we will prepare the setup a little bit first. We will need to connect UV coordinates to the surface of the model somehow, so we will start by going to the _UV Editing_ context. On the left hand side, do _Image_ -> _New_ and choose _Generated Type_ to be something like _Color Grid_. You should see a bunch of colors and letters and numbers show up.
@@ -185,7 +190,7 @@ The UV Coordinate Map grid to test coordinate mapping.
 
 Next, we move to the _Shading_ context to connect this UV map to the object itself. In the bottom left panel (with the grid), find the button that looks like this: <img src="{{ '/assets/img/blender/19-button.png' | absolute_url }}" height="12pt" />. Click it and choose the color grid you put in in the earlier step.
 
-Next, in the bottom right pane, find the button that looks like this: <img src="{{ '/assets/img/blender/20-button.png | absolute_url }}" height="12pt" />. Click _New_ to create a new Material definition for the surface.
+Next, in the bottom right pane, find the button that looks like this: <img src="{{ '/assets/img/blender/20-button.png' | absolute_url }}" height="12pt" />. Click _New_ to create a new Material definition for the surface.
 
 Then, still in the bottom right panel, go to _Add_ -> _Input_ -> _UV Map_ to create a UV Map node. Place the node somewhere to the right of the other boxes, and connect its output to the _Base Color_ connection point in the middle box, by clicking on the little dot where it says UV and dragging over to the dot next to Base Color.
 
