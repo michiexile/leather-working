@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/leather-working//assets/images/logo.png">
+
+<title>Making a Pattern from Blender | michiexile Does Leather</title>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Making a Pattern from Blender | michiexile Does Leather</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Making a Pattern from Blender" />
+<meta name="author" content="mvj" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For the Hedeby Quiver, I decided to try to generate the pattern myself, with 3d-modeling and UV coordinate maps, rather than building on the approach taken by the Leather Working Reverend." />
+<meta property="og:description" content="For the Hedeby Quiver, I decided to try to generate the pattern myself, with 3d-modeling and UV coordinate maps, rather than building on the approach taken by the Leather Working Reverend." />
+<link rel="canonical" href="https://michiexile.github.io/leather-working/blog/computer-assisted/2022/12/28/pattern-from-blender.html" />
+<meta property="og:url" content="https://michiexile.github.io/leather-working/blog/computer-assisted/2022/12/28/pattern-from-blender.html" />
+<meta property="og:site_name" content="michiexile Does Leather" />
+<meta property="og:image" content="https://michiexile.github.io/leather-working/assets/img/blender/26-minimizestretch.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-28T19:45:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://michiexile.github.io/leather-working/assets/img/blender/26-minimizestretch.png" />
+<meta property="twitter:title" content="Making a Pattern from Blender" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"mvj"},"dateModified":"2022-12-28T19:45:00+00:00","datePublished":"2022-12-28T19:45:00+00:00","description":"For the Hedeby Quiver, I decided to try to generate the pattern myself, with 3d-modeling and UV coordinate maps, rather than building on the approach taken by the Leather Working Reverend.","headline":"Making a Pattern from Blender","image":"https://michiexile.github.io/leather-working/assets/img/blender/26-minimizestretch.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://michiexile.github.io/leather-working/blog/computer-assisted/2022/12/28/pattern-from-blender.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://michiexile.github.io/leather-working/assets/img/header.png"},"name":"mvj"},"url":"https://michiexile.github.io/leather-working/blog/computer-assisted/2022/12/28/pattern-from-blender.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/leather-working//assets/css/screen.css" rel="stylesheet">
+<link href="/leather-working//assets/css/main.css" rel="stylesheet">
+<link href="/leather-working//assets/css/local.css" rel="stylesheet">
+
+<script src="/leather-working//assets/js/jquery.min.js"></script>
+
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/leather-working//">
+    <img src="/leather-working//assets/img/header.png" alt="michiexile Does Leather">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+	      
+	      
+	      <li class="nav-item">
+	      
+	      <a class="nav-link" href="https://michiexile.github.io/leather-working/">Home</a>
+	      </li>
+	      
+                <script src="/leather-working//assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/leather-working//assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1>michiexile Does Leather</h1>
+    <p class="lead">
+        This site contains my leather working projects - with blog posts, and other good resources as I come up with them.
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <h1>Making a Pattern from Blender</h1>
+<p>28 Dec 2022 - mvj</p>
+
+<p>For the <a href="/blog/hedeby-quiver/archery/2022/12/28/hedeby-quiver.html">Hedeby Quiver</a>, I decided to try to generate the pattern myself, with 3d-modeling and UV coordinate maps, rather than building on the approach taken by the Leather Working Reverend.</p>
+
+<p>I was encouraged in the ambition by the <a href="http://thomaskole.nl/s2s/">Seams to Sewing Pattern</a> plugin by Thomas Kole. So, building on the documentation pages for the plugin, I set out learning enough blender to pull off the project.</p>
+
+<p>Here’s how that went:</p>
+
+<h1 id="modeling-the-quiver">Modeling the quiver</h1>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/01-startstate.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Starting state of a new Blender project.
+</figcaption>
+</figure>
+
+<p>First, remove the cube (select it, and use <code class="language-plaintext highlighter-rouge">x</code> or an appropriate menu). Next, we will add a <em>Capsule</em> (and build the quiver as a chopped off and drawn out capsule shape).</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/02-capsule.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Cube is removed, we've put in a capsule instead.
+</figcaption>
+</figure>
+
+<p>To get the sizing we want from the capsule, let’s:</p>
+<ul>
+  <li>rotate it by 90º around the Y-axis to stand it upright</li>
+  <li>scale it by 0.1 along the Y- and Z-axes to squeeze it</li>
+  <li>translate it by 2m along the X-axis to stand it on top of the origin plane.</li>
+</ul>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/03-mapped.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Slender capsule shape standing on the origin.
+</figcaption>
+</figure>
+
+<p>Now, it’s time to convert this from an <em>Metaball</em> to a <em>Mesh</em> so that we can go in and chop it up into the pieces we need.</p>
+
+<p>Select the capsule, go to the <em>Layout</em> context and the Object menu. Find the Convert submenu and choose to convert it to a <em>Mesh</em>.</p>
+
+<p>At this point, we <em>could</em> try to do something to increase the polygon count and get a smoother shape – I didn’t. Instead, now that we have a mesh it’s time to go in and carve out the pieces we want to keep.</p>
+
+<p>I used the <em>Measure</em> tool to figure out where 0.7m tall would fall on this shape, and used that to guide my cutting of the shape. Once you know where to cut, the process I followed is to select vertices <em>above</em> my designated cut and remove them (and everything defined by or connected to them).
+I discovered doing this that I would need to subdivide the edges near my cut (so that I could cut halfway between two rows of vertices) and needed to rotate the mesh and add to my selection to get the things behind the object as well.</p>
+
+<p>Hold shift and keep selecting to get the things you need.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/04-subdividing.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Just before subdividing to find the cut edges.
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/05-subdivided.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Edges subdivided.
+</figcaption>
+</figure>
+
+<p>Speedy removal can be done by selecting in Face Select mode, and delete using the <code class="language-plaintext highlighter-rouge">X</code> button and choosing <em>Face</em> removal.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/06-select.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Selected a bunch of faces.
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/07-delete.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Selected faces deleted
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/08-select.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Select the rest of the faces (from the other direction).
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/09-quiver.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+The _finished_ quiver shape (next is not about _sculpting_ any more)
+</figcaption>
+</figure>
+
+<h1 id="carving-out-a-pattern">Carving out a pattern</h1>
+
+<p>To carve out a pattern, we will go in and create <em>Seams</em>. There should be a way to then <em>use</em> the resulting seams for pulling the shape apart, but since I couldn’t make it work, we will instead separate the seam edges ourselves afterwards.</p>
+
+<p>Use the <em>Zoom</em> and <em>Pan</em> controls on the right to get a close enough view of the mesh to pick out the details you need.</p>
+
+<p>When doing this, I quickly realized there are some clusters of vertices that are very tightly connected, so maybe to make it all easier we will start by <em>Merging by distance</em>. Select everything (with <code class="language-plaintext highlighter-rouge">A</code>), and go to Mesh -&gt; Merge -&gt; By Distance. Then open up the small popup block bottom right labeled <em>Merge by Distance</em> to change the settings for merging by distance. Click the <code class="language-plaintext highlighter-rouge">&gt;</code> symbol to open it up, and start increasing the <em>Merge Distance</em> until the little text-information at the bottom tells you that some (maybe 60 or so) vertices have been merged. 0.1m works for me.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/10-merged.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Here's the state after nearby vertices have been merged together.
+</figcaption>
+</figure>
+
+<p>Pick <em>Vertex Select</em> mode, and go through selecting vertices where you want seams between the pieces, and then use the <em>Vertex</em> -&gt; <em>Connect Vertex Path</em> (or <code class="language-plaintext highlighter-rouge">J</code>) to make sure you have edges everywhere you need them. Once you have all the edges in place, go to <em>UV</em> -&gt; <em>Mark Seam</em>.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/11-seamstart.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Starting one of the Hedeby quiver seams.
+</figcaption>
+</figure>
+
+<p>Keep going, and subdivide the mesh if you need to. Most things you can do with <code class="language-plaintext highlighter-rouge">J</code> (connect vertex path), but some things may need for you to select, remove (with <code class="language-plaintext highlighter-rouge">X</code>) and then reintroduce faces (select vertices, press <code class="language-plaintext highlighter-rouge">F</code> to create a face spanned by them).</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/12-markseam.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Selected a path and go to UV -&gt; Mark Seam
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/13-tothetop.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Follow the paths, mark the seams, all the way to the top.
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/14-allseams.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+All seams for the Hedeby quiver in place.
+</figcaption>
+</figure>
+
+<p>Now it is time to cut this surface up into the separate surface patches we need. Choose Edge Selection mode, and select any one of the Seam marked edges. Then <em>Select</em> -&gt; <em>Select Similar</em> -&gt; <em>Seam</em> to select all the seam edges. Then go for <em>Mesh</em> -&gt; <em>Split</em> -&gt; <em>Faces by Edges</em> to cut the pieces apart.</p>
+
+<p>You can check your work by selecting anything in one component, and pressing <code class="language-plaintext highlighter-rouge">L</code> to select the entire connected component. If you get just your separated patch, you’re in good shape.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/15-selectseam.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Select all the seam edges.
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/16-separate.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Separate Faces by Edges.
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/17-selected.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+One connected component selected.
+</figcaption>
+</figure>
+
+<h1 id="uv-coordinate-maps-to-flatten-pattern-pieces">UV Coordinate Maps to flatten pattern pieces</h1>
+
+<p>Now we are getting close to where we can use the UV Layout engine to create pattern parts for a concrete sewing pattern for the quiver.</p>
+
+<p>To be able to track how the UV coordinate map interacts with the shape, we will prepare the setup a little bit first. We will need to connect UV coordinates to the surface of the model somehow, so we will start by going to the <em>UV Editing</em> context. On the left hand side, do <em>Image</em> -&gt; <em>New</em> and choose <em>Generated Type</em> to be something like <em>Color Grid</em>. You should see a bunch of colors and letters and numbers show up.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/18-uvgrid.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+The UV Coordinate Map grid to test coordinate mapping.
+</figcaption>
+</figure>
+
+<p>Next, we move to the <em>Shading</em> context to connect this UV map to the object itself. In the bottom left panel (with the grid), find the button that looks like this: <img src="https://michiexile.github.io/leather-working/assets/img/blender/19-button.png" height="12pt" />. Click it and choose the color grid you put in in the earlier step.</p>
+
+<p>Next, in the bottom right pane, find the button that looks like this: <img src="https://michiexile.github.io/leather-working/assets/img/blender/20-button.png" height="12pt" />. Click <em>New</em> to create a new Material definition for the surface.</p>
+
+<p>Then, still in the bottom right panel, go to <em>Add</em> -&gt; <em>Input</em> -&gt; <em>UV Map</em> to create a UV Map node. Place the node somewhere to the right of the other boxes, and connect its output to the <em>Base Color</em> connection point in the middle box, by clicking on the little dot where it says UV and dragging over to the dot next to Base Color.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/21-uvnode.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Here's how we create a UV node.
+</figcaption>
+</figure>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/22-connected.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Connecting the nodes to each other.
+</figcaption>
+</figure>
+
+<p>The quiver still does not look terribly exciting, but that’s because we have not yet connected the UV coordinate map to the mesh itself. So let’s go to <em>Edit Mode</em> in the top right panel (where we see the quiver model floating around) and let’s create a UV coordinate map.</p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">A</code> to select the entire mesh, and then press <code class="language-plaintext highlighter-rouge">U</code> (or go to the <em>UV</em> menu), and choose <em>Unwrap</em>.</p>
+
+<p>You will get an error message about non-uniform scales, which turns out to be because we did a bunch of rescaling operations - but didn’t quite <em>finish</em> the operations early on. Switch to <em>Object Mode</em>, click on the mesh to select it, and press Ctrl+<code class="language-plaintext highlighter-rouge">A</code> and choose <em>Scale</em> (or go to <em>Object</em> -&gt; <em>Apply</em> -&gt; <em>Scale</em>) to apply our earlier transformations.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/23-fixscale.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Applying the scale so that we can successfully unwrap the mesh onto the UV coordinate plane.
+</figcaption>
+</figure>
+
+<p>Then back to Edit Mode, press <code class="language-plaintext highlighter-rouge">A</code> to select the entire mesh, and <code class="language-plaintext highlighter-rouge">U</code> to choose <em>Unwrap</em>. Switch to <em>UV Editing</em> context to see the effects of doing this - you can now see the unwrapped mesh laid out on the UV plane to the left. If you find the four balls to the far right on the menu bar of the right hand panel and click the <em>Material Preview</em> or the <em>Render Preview</em> viewing mode, you can see the pieces of your mesh color in according to where they are in the UV plane.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/24-uvlayout.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Seeing the full UV layout.
+</figcaption>
+</figure>
+
+<p>You should now be able to select something (vertex, edge, face, anything) on the UV plane to the left, and use <code class="language-plaintext highlighter-rouge">L</code> to select an entire connected component. You can then maneuver this around the UV plane (use <code class="language-plaintext highlighter-rouge">G</code> to move, or <code class="language-plaintext highlighter-rouge">R</code> to rotate, moving the mouse to actually move and rotate).</p>
+
+<p>Also helpful is to go, in the left hand (UV plane) panel, to the <em>Overlay</em> button and select the Display Stretch option. For things like leather work, it’s probably more helpful to use the <em>Area</em> display mode than the <em>Angle</em> display mode - to see where the mesh is stretched out the most.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/25-displaystretch.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+How to display the amount of stretch in a UV mapping.
+</figcaption>
+</figure>
+
+<p>You can also at this stage in the left hand panel go to <em>UV</em> -&gt; <em>Minimize Stretch</em> to see if it can come up with a better mapping of the pieces for you. Roll the scroll wheel <em>down</em> as far as possible to relax the mesh as much as you can.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/26-minimizestretch.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+How to minimize the stretch in a UV mapping
+</figcaption>
+</figure>
+
+<p>If you are ambitious, you can start using the three hand-shaped tools at the bottom to try to reduce the stretch (get as close to blue as possible), especially for the high-curvature piece to the left. Rescale it (select something, then <code class="language-plaintext highlighter-rouge">L</code> for the entire thing, then <code class="language-plaintext highlighter-rouge">S</code> and move the mouse to try different scales) and then start moving things around where it’s still not blue. Periodically select the component (with <code class="language-plaintext highlighter-rouge">L</code>) and do <em>Minimize Stretch</em> again to see if it gets better. You will have to change the shape yourself – <em>Minimize Stretch</em> only moves the interior pieces around for you.</p>
+
+<figure class="figure">
+<img src="https://michiexile.github.io/leather-working/assets/img/blender/27-modified.png" class="figure-img img-fluid rounded" />
+<figcaption class="figure-caption">
+Final state before export.
+</figcaption>
+</figure>
+
+<p>Once you’re at a state where you are happy with the design, you can export the resulting UV coordinate map (and then use it as a sewing pattern). In the left hand panel, choose <em>UV</em> -&gt; <em>Export UV Layout</em>. In the save file dialog, make sure you select <em>All UVs</em>, and pick a nice export format (such as SVG). Pick directory, filename, and export it.</p>
+
+<p>The resulting SVG you can import into eg Illustrator or something else that you can print from, or instruct laser cutters, or however you want to use the pattern you put together.</p>
+
+<p>My Blender render of the intended final outcome, with leather textures in different colors to show the composition, can be seen here:</p>
+
+<p><img src="https://michiexile.github.io/leather-working/assets/img/blender/28-render.png" alt="" /></p>
+
+
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/leather-working//categories#blog">blog (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/leather-working//categories#hedeby-quiver">hedeby-quiver (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/leather-working//categories#archery">archery (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/leather-working//categories#computer-assisted">computer-assisted (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/leather-working//categories#leather">leather (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/leather-working//categories#cuir-bouilli">cuir-bouilli (2)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2023 michiexile Does Leather 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/leather-working//assets/js/mediumish.js"></script>
+
+
+
+<script src="/leather-working//assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>
